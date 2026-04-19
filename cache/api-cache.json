@@ -1,0 +1,366 @@
+{
+    "meta": {
+        "type": "full",
+        "source": "Iran Internet Monitor",
+        "server_time": "2026-04-19T17:25:31+03:30",
+        "services_total": 39,
+        "services_up": 13
+    },
+    "current": {
+        "health": 33,
+        "status": "severe",
+        "updated": "2026-04-19 17:24:43"
+    },
+    "services": {
+        "DNS.TheAzizi.IR": {
+            "up": false,
+            "ms": null
+        },
+        "Google.com": {
+            "up": true,
+            "ms": 263
+        },
+        "Gmail.com": {
+            "up": false,
+            "ms": null
+        },
+        "Whatsapp.com": {
+            "up": false,
+            "ms": null
+        },
+        "Steam Store": {
+            "up": false,
+            "ms": null
+        },
+        "Accuweather.com": {
+            "up": false,
+            "ms": null
+        },
+        "Wikipedia.org": {
+            "up": false,
+            "ms": null
+        },
+        "Cloudflare.com": {
+            "up": false,
+            "ms": null
+        },
+        "GitHub.com": {
+            "up": true,
+            "ms": 344
+        },
+        "StackOverflow.com": {
+            "up": false,
+            "ms": null
+        },
+        "Microsoft.com": {
+            "up": false,
+            "ms": null
+        },
+        "Bing.com": {
+            "up": false,
+            "ms": null
+        },
+        "Playstation.com": {
+            "up": false,
+            "ms": null
+        },
+        "WordPress.org": {
+            "up": false,
+            "ms": null
+        },
+        "Grok.com": {
+            "up": false,
+            "ms": null
+        },
+        "DeepSeek.com": {
+            "up": true,
+            "ms": 331
+        },
+        "ChatGPT.com": {
+            "up": false,
+            "ms": null
+        },
+        "vercel.com": {
+            "up": true,
+            "ms": 316
+        },
+        "vercel.app": {
+            "up": false,
+            "ms": null
+        },
+        "sourceforge.net": {
+            "up": true,
+            "ms": 112
+        },
+        "letsencrypt.org": {
+            "up": true,
+            "ms": 349
+        },
+        "sciencedirect.com": {
+            "up": false,
+            "ms": null
+        },
+        "scopus.com": {
+            "up": false,
+            "ms": null
+        },
+        "springer.com": {
+            "up": true,
+            "ms": 412
+        },
+        "pubmed": {
+            "up": false,
+            "ms": null
+        },
+        "react.dev": {
+            "up": false,
+            "ms": null
+        },
+        "nextjs.org": {
+            "up": true,
+            "ms": 309
+        },
+        "python.org": {
+            "up": true,
+            "ms": 333
+        },
+        "pypi.org": {
+            "up": false,
+            "ms": null
+        },
+        "ubuntu.com": {
+            "up": false,
+            "ms": null
+        },
+        "crates.io": {
+            "up": false,
+            "ms": null
+        },
+        "certum.eu": {
+            "up": true,
+            "ms": 556
+        },
+        "npmjs.com": {
+            "up": true,
+            "ms": 130
+        },
+        "ieee.org": {
+            "up": false,
+            "ms": null
+        },
+        "tandfonline.com": {
+            "up": false,
+            "ms": null
+        },
+        "digicert.com": {
+            "up": true,
+            "ms": 348
+        },
+        "askubuntu.com": {
+            "up": false,
+            "ms": null
+        },
+        "sectigo.com": {
+            "up": true,
+            "ms": 1832
+        },
+        "speedtest.org": {
+            "up": false,
+            "ms": null
+        }
+    },
+    "history": [
+        {
+            "t": "16:37",
+            "h": 38
+        },
+        {
+            "t": "16:38",
+            "h": 38
+        },
+        {
+            "t": "16:39",
+            "h": 36
+        },
+        {
+            "t": "16:40",
+            "h": 31
+        },
+        {
+            "t": "16:41",
+            "h": 33
+        },
+        {
+            "t": "16:42",
+            "h": 36
+        },
+        {
+            "t": "16:43",
+            "h": 36
+        },
+        {
+            "t": "16:44",
+            "h": 38
+        },
+        {
+            "t": "16:45",
+            "h": 33
+        },
+        {
+            "t": "16:46",
+            "h": 36
+        },
+        {
+            "t": "16:47",
+            "h": 36
+        },
+        {
+            "t": "16:48",
+            "h": 36
+        },
+        {
+            "t": "16:50",
+            "h": 36
+        },
+        {
+            "t": "16:50",
+            "h": 38
+        },
+        {
+            "t": "16:51",
+            "h": 36
+        },
+        {
+            "t": "16:52",
+            "h": 38
+        },
+        {
+            "t": "16:53",
+            "h": 38
+        },
+        {
+            "t": "16:54",
+            "h": 33
+        },
+        {
+            "t": "16:55",
+            "h": 36
+        },
+        {
+            "t": "16:56",
+            "h": 36
+        },
+        {
+            "t": "16:57",
+            "h": 33
+        },
+        {
+            "t": "16:58",
+            "h": 36
+        },
+        {
+            "t": "16:59",
+            "h": 36
+        },
+        {
+            "t": "17:00",
+            "h": 36
+        },
+        {
+            "t": "17:01",
+            "h": 33
+        },
+        {
+            "t": "17:02",
+            "h": 31
+        },
+        {
+            "t": "17:03",
+            "h": 33
+        },
+        {
+            "t": "17:04",
+            "h": 33
+        },
+        {
+            "t": "17:05",
+            "h": 33
+        },
+        {
+            "t": "17:06",
+            "h": 31
+        },
+        {
+            "t": "17:07",
+            "h": 36
+        },
+        {
+            "t": "17:08",
+            "h": 36
+        },
+        {
+            "t": "17:09",
+            "h": 38
+        },
+        {
+            "t": "17:10",
+            "h": 38
+        },
+        {
+            "t": "17:11",
+            "h": 36
+        },
+        {
+            "t": "17:12",
+            "h": 26
+        },
+        {
+            "t": "17:13",
+            "h": 31
+        },
+        {
+            "t": "17:14",
+            "h": 36
+        },
+        {
+            "t": "17:16",
+            "h": 26
+        },
+        {
+            "t": "17:16",
+            "h": 36
+        },
+        {
+            "t": "17:17",
+            "h": 38
+        },
+        {
+            "t": "17:18",
+            "h": 36
+        },
+        {
+            "t": "17:19",
+            "h": 38
+        },
+        {
+            "t": "17:20",
+            "h": 36
+        },
+        {
+            "t": "17:21",
+            "h": 36
+        },
+        {
+            "t": "17:22",
+            "h": 33
+        },
+        {
+            "t": "17:23",
+            "h": 33
+        },
+        {
+            "t": "17:24",
+            "h": 33
+        }
+    ]
+}

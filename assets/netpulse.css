@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "IRANYekan";
+  src:
+    url("../assets/IRANYekanXVF.woff2") format("woff-variations"),
+    url("../assets/IRANYekanXVF.woff2") format("woff");
+  font-weight: 100 1000;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Jet";
+  src: url("../assets/JetBrainsMono-VariableFont_wght.ttf");
+  font-weight: 100 1000;
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IRANYekan", tahoma;
+  font-variation-settings: "dots" 1;
+}
+body {
+  background: oklch(0.21 0.006 285.885);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  user-select: none;
+}
+.dashboard {
+  max-width: 100%;
+  width: 100%;
+}
+#dashboardContent {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 32px;
+}
+#dashboardContent > * {
+  width: 100%;
+}
+.card {
+  background: oklch(0.274 0.006 286.033);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.card.chart .title {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.card.chart .title i {
+  color: oklch(0.765 0.177 163.223);
+}
+.card.chart .title h3 {
+  color: #fff;
+  font-weight: 500;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+h1 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+h1 i {
+  color: oklch(0.765 0.177 163.223);
+  font-size: 2rem;
+}
+.updated-badge {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  background: oklch(0.696 0.17 162.48 / 10%);
+  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  color: oklch(0.696 0.17 162.48);
+  font-weight: 500;
+  border: 2px solid oklch(0.696 0.17 162.48);
+}
+.health-ring {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.gauge {
+  position: relative;
+  width: 130px;
+  height: 130px;
+}
+.gauge svg {
+  transform: rotate(-90deg);
+}
+.gauge-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+.gauge-fill {
+  stroke: url(#gradient);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s;
+}
+.gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.health-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.health-label {
+  font-size: 0.8rem;
+  color: #9ca8c9;
+}
+.status-tag {
+  text-align: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+.status-normal {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 2px solid rgba(16, 185, 129, 0.3);
+}
+.status-degraded {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border: 2px solid rgba(245, 158, 11, 0.3);
+}
+.status-down,
+.status-severe {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding: 12px;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 1.2rem 1rem;
+  transition: all 0.15s;
+}
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.service-header i {
+  font-size: 1.5rem;
+  color: #6b8cce;
+}
+.service-name {
+  font-family: "Jet";
+  font-weight: 600;
+  color: oklch(0.985 0 0);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.service-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #10b981;
+  box-shadow: 0 0 0 3px oklch(0.696 0.17 162.48 / 30%);
+}
+.dot.down {
+  background: oklch(0.637 0.237 25.331);
+  box-shadow: 0 0 0 3px oklch(0.637 0.237 25.331 / 30%);
+}
+.latency {
+  font-family: "Jet";
+  color: #b1c5f0;
+  font-size: 0.9rem;
+}
+.chart-container {
+  margin-top: 1rem;
+  height: 180px;
+  position: relative;
+}
+.footer-note {
+  text-align: right;
+  color: #6c7a9e;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #b0c4ff;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  margin-right: auto;
+}
+.refresh-btn:hover {
+  background: oklch(0.21 0.006 285.885 / 5%);
+  border-color: oklch(0.696 0.17 162.48);
+  color: #fff;
+}
+.loading-placeholder {
+  color: #9ca8c9;
+  text-align: center;
+  padding: 2rem;
+}
+.statusmeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 22px;
+}
+.meta-info {
+  color: #9ca8c9;
+  font-size: 0.9rem;
+}
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.search-box input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  width: 200px;
+  outline: none;
+}
+.search-box input::placeholder {
+  color: #6c7a9e;
+}
+.sort-btn {
+  background: none;
+  border: 2px solid oklch(0.985 0 0 / 10%);
+  color: oklch(0.845 0.143 164.978);
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.sort-btn.active {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+.service-item[data-service="DNS.TheAzizi.IR"] {
+  display: none;
+}
+.status-text {
+  font-size: 14px;
+  font-weight: 500;
+}

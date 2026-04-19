@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIM</title>
+    <script src="assets/chart.js"></script>
+    <link rel="stylesheet" href="assets/all.css" />
+    <link rel="stylesheet" href="assets/netpulse.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="card">
+        <div class="header">
+          <h1><i class="fal fa-satellite-dish"></i>مانیتورینگ اینترنت ایران</h1>
+          <div class="updated-badge">
+            <i class="fal fa-clock"></i><span id="timeDisplay">--:--</span>
+          </div>
+        </div>
+        <div id="loadingArea">
+          <div class="loading-placeholder">
+            <i class="fas fa-spinner fa-pulse fa-3x"></i>
+          </div>
+        </div>
+        <div id="dashboardContent" style="display: none">
+          <div class="health-ring">
+            <div class="gauge">
+              <svg width="130" height="130" viewBox="0 0 130 130">
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#3b82f6" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  class="gauge-bg"
+                  cx="65"
+                  cy="65"
+                  r="58"
+                  fill="none"
+                  stroke-width="10"
+                />
+                <circle
+                  id="gaugeFill"
+                  class="gauge-fill"
+                  cx="65"
+                  cy="65"
+                  r="58"
+                  fill="none"
+                  stroke-width="10"
+                  stroke-dasharray="364.4"
+                  stroke-dashoffset="364.4"
+                />
+              </svg>
+              <div class="gauge-center">
+                <div class="health-value" id="healthValue">--</div>
+                <div class="health-label">وضعیت کلی</div>
+              </div>
+            </div>
+            <div class="statusmeta">
+              <div id="statusTag" class="status-tag">--</div>
+              <div class="meta-info">
+                <i class="fal fa-microchip"></i>
+                <span id="serviceCount">0 سرویس</span>
+              </div>
+            </div>
+            <button class="refresh-btn" id="refreshBtn">
+              <i class="fal fa-sync-alt"></i>
+              آپدیت
+            </button>
+          </div>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو..." />
+            <button class="sort-btn" id="sortBtn">
+              <i class="fal fa-sort"></i>
+              مرتب سازی بر اساس وضعیت
+            </button>
+          </div>
+          <div class="services-grid" id="servicesContainer"></div>
+        </div>
+      </div>
+      <div class="card chart">
+        <div class="title">
+          <i class="fas fa-chart-line"></i>
+          <h3>نمودار تاریخچه وضعیت</h3>
+        </div>
+        <div class="chart-container"><canvas id="historyChart"></canvas></div>
+        <div class="footer-note">
+          <i class="far fa-clock"></i>
+          آپدیت در 1 دقیقه
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
