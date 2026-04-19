@@ -95,6 +95,7 @@ h1 i {
 .health-ring {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -294,4 +295,68 @@ h1 i {
 .status-text {
   font-size: 14px;
   font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 860px) {
+  h1 {
+    font-size: 20px;
+  }
+  h1 i {
+    font-size: 22px;
+  }
+  .card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .updated-badge {
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+  .updated-badge i {
+    font-size: 14px;
+  }
+  .status-tag {
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .meta-info {
+    font-size: 12px;
+  }
+  .health-value {
+    font-size: 30px;
+  }
+  .health-label {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .refresh-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .search-box {
+    flex-direction: column;
+  }
+  .search-box input,
+  .sort-btn {
+    width: 100%;
+  }
+  .services-grid {
+    padding: 0;
+  }
+  .service-item {
+    border-radius: 12px;
+    padding: 16px 14px;
+  }
+  .service-name {
+    font-size: 14px;
+  }
+  .footer-note {
+    font-size: 11px;
+    font-weight: 500;
+  }
 }
