@@ -2,14 +2,14 @@
     "meta": {
         "type": "full",
         "source": "Iran Internet Monitor",
-        "server_time": "2026-04-19T17:25:31+03:30",
+        "server_time": "2026-04-19T17:31:30+03:30",
         "services_total": 39,
-        "services_up": 13
+        "services_up": 15
     },
     "current": {
-        "health": 33,
+        "health": 38,
         "status": "severe",
-        "updated": "2026-04-19 17:24:43"
+        "updated": "2026-04-19 17:30:43"
     },
     "services": {
         "DNS.TheAzizi.IR": {
@@ -18,11 +18,11 @@
         },
         "Google.com": {
             "up": true,
-            "ms": 263
+            "ms": 221
         },
         "Gmail.com": {
-            "up": false,
-            "ms": null
+            "up": true,
+            "ms": 238
         },
         "Whatsapp.com": {
             "up": false,
@@ -46,7 +46,7 @@
         },
         "GitHub.com": {
             "up": true,
-            "ms": 344
+            "ms": 341
         },
         "StackOverflow.com": {
             "up": false,
@@ -74,7 +74,7 @@
         },
         "DeepSeek.com": {
             "up": true,
-            "ms": 331
+            "ms": 300
         },
         "ChatGPT.com": {
             "up": false,
@@ -82,7 +82,7 @@
         },
         "vercel.com": {
             "up": true,
-            "ms": 316
+            "ms": 346
         },
         "vercel.app": {
             "up": false,
@@ -90,11 +90,11 @@
         },
         "sourceforge.net": {
             "up": true,
-            "ms": 112
+            "ms": 124
         },
         "letsencrypt.org": {
             "up": true,
-            "ms": 349
+            "ms": 341
         },
         "sciencedirect.com": {
             "up": false,
@@ -106,7 +106,7 @@
         },
         "springer.com": {
             "up": true,
-            "ms": 412
+            "ms": 332
         },
         "pubmed": {
             "up": false,
@@ -118,19 +118,19 @@
         },
         "nextjs.org": {
             "up": true,
-            "ms": 309
+            "ms": 313
         },
         "python.org": {
             "up": true,
-            "ms": 333
+            "ms": 314
         },
         "pypi.org": {
             "up": false,
             "ms": null
         },
         "ubuntu.com": {
-            "up": false,
-            "ms": null
+            "up": true,
+            "ms": 375
         },
         "crates.io": {
             "up": false,
@@ -138,11 +138,11 @@
         },
         "certum.eu": {
             "up": true,
-            "ms": 556
+            "ms": 512
         },
         "npmjs.com": {
             "up": true,
-            "ms": 130
+            "ms": 101
         },
         "ieee.org": {
             "up": false,
@@ -154,7 +154,7 @@
         },
         "digicert.com": {
             "up": true,
-            "ms": 348
+            "ms": 444
         },
         "askubuntu.com": {
             "up": false,
@@ -162,7 +162,7 @@
         },
         "sectigo.com": {
             "up": true,
-            "ms": 1832
+            "ms": 1739
         },
         "speedtest.org": {
             "up": false,
@@ -170,30 +170,6 @@
         }
     },
     "history": [
-        {
-            "t": "16:37",
-            "h": 38
-        },
-        {
-            "t": "16:38",
-            "h": 38
-        },
-        {
-            "t": "16:39",
-            "h": 36
-        },
-        {
-            "t": "16:40",
-            "h": 31
-        },
-        {
-            "t": "16:41",
-            "h": 33
-        },
-        {
-            "t": "16:42",
-            "h": 36
-        },
         {
             "t": "16:43",
             "h": 36
@@ -361,6 +337,30 @@
         {
             "t": "17:24",
             "h": 33
+        },
+        {
+            "t": "17:25",
+            "h": 36
+        },
+        {
+            "t": "17:26",
+            "h": 36
+        },
+        {
+            "t": "17:27",
+            "h": 36
+        },
+        {
+            "t": "17:28",
+            "h": 33
+        },
+        {
+            "t": "17:29",
+            "h": 33
+        },
+        {
+            "t": "17:30",
+            "h": 38
         }
     ]
 }

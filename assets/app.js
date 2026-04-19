@@ -89,7 +89,6 @@
       const term = filterText.trim().toLowerCase();
       entries = entries.filter(([name]) => name.toLowerCase().includes(term));
     }
-    // Sort
     entries.sort((a, b) => {
       const aUp = a[1].up;
       const bUp = b[1].up;
@@ -212,7 +211,7 @@
     try {
       const response = await fetch(API_URL);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const text = await response.text(); // Get raw text first
+      const text = await response.text();
       try {
         const data = JSON.parse(text);
         renderData(data);
@@ -232,7 +231,6 @@
     }
   }
 
-  // Event listeners
   refreshBtn.addEventListener("click", fetchData);
   searchInput.addEventListener("input", () => {
     if (currentData)
@@ -247,7 +245,6 @@
       renderServices(currentData.services, searchInput.value, sortAscending);
   });
 
-  // Initialize
   fetchData();
   setInterval(fetchData, 60000);
 })();

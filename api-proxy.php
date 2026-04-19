@@ -1,19 +1,9 @@
 <?php
-/**
- * API Proxy for Iran Internet Monitor
- * Robust version with error handling and fallback HTTP client
- */
 
-// -------------------------------------------------------------------
-// 1. Enable error logging (but hide from output)
-// -------------------------------------------------------------------
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 
-// -------------------------------------------------------------------
-// 2. Load environment variables from .env
-// -------------------------------------------------------------------
 function loadEnv($path) {
     if (!file_exists($path)) return [];
     $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -38,16 +28,10 @@ if (empty($apiUrl)) {
     exit;
 }
 
-// -------------------------------------------------------------------
-// 3. CORS headers
-// -------------------------------------------------------------------
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET');
 header('Content-Type: application/json; charset=utf-8');
 
-// -------------------------------------------------------------------
-// 4. Simple file cache (optional)
-// -------------------------------------------------------------------
 $cacheFile = __DIR__ . '/cache/api-cache.json';
 $cacheTime = 30; // seconds
 
@@ -56,9 +40,6 @@ if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTime) {
     exit;
 }
 
-// -------------------------------------------------------------------
-// 5. Fetch from upstream API (try cURL, fallback to file_get_contents)
-// -------------------------------------------------------------------
 $response = false;
 $error = null;
 
@@ -81,7 +62,6 @@ if (function_exists('curl_init')) {
         $error = $error ?: "HTTP $httpCode";
     }
 } else {
-    // Fallback to file_get_contents (requires allow_url_fopen = On)
     $context = stream_context_create([
         'http' => [
             'timeout' => 10,
@@ -102,9 +82,6 @@ if ($response === false) {
     exit;
 }
 
-// -------------------------------------------------------------------
-// 6. Validate JSON
-// -------------------------------------------------------------------
 $decoded = json_decode($response);
 if (json_last_error() !== JSON_ERROR_NONE) {
     http_response_code(502);
@@ -112,9 +89,6 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     exit;
 }
 
-// -------------------------------------------------------------------
-// 7. Save cache and output
-// -------------------------------------------------------------------
 if (!is_dir(dirname($cacheFile))) {
     mkdir(dirname($cacheFile), 0755, true);
 }
